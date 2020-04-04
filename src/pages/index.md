@@ -1,6 +1,6 @@
 ---
 title: Hello world
 image: /img/blog-index.jpg
-heading: Test
+heading: New Heading
 subheading: Test 2
 ---

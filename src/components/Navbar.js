@@ -1,5 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+
+import styles from './Navbar.module.css';
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -13,13 +15,13 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className={styles.navbar}
         role="navigation"
         aria-label="main-navigation"
       >
         <div className="container">
           <div className="navbar-brand">
-            <Link className="navbar-item" to="/">
+            <Link className={styles.navbar} to="/">
               Justin Luong
             </Link>
           </div>

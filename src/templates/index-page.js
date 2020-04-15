@@ -2,16 +2,27 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import styled from "styled-components";
 
 import Layout from "../components/Layout";
 
+const Container = styled.div`
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  @media only screen and (min-width: 768px) {
+    padding: 0 50px;
+  }
+`;
+
+
 export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
-  <div>
+  <Container>
     <Img fluid={image.childImageSharp.fluid} />
     <h1>{title}</h1>
     <h2>{heading}</h2>
     <h3>{subheading}</h3>
-  </div>
+  </Container>
 );
 
 IndexPageTemplate.propTypes = {

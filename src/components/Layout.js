@@ -4,6 +4,23 @@ import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { createGlobalStyle } from 'styled-components';
+import 'typeface-montserrat';
+import 'typeface-hind';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+  }
+
+  p, em, strong, i, b {
+    font-family: Hind;
+  }
+`;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -47,6 +64,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
+      <GlobalStyle />
       <Navbar />
       <div>{children}</div>
       <Footer />

@@ -1,7 +1,54 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+import React from 'react';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
+
+const StyledNav = styled.nav`
+  margin-top: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding:0;
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  padding-right: 10px;
+  color: #234ef3;
+  font-family: Montserrat;
+  text-decoration: none;
+  font-size: 20.8px;
+  @media only screen and (min-width: 768px) {
+    padding: 0 0 0 20px;
+  }
+`;
+
+const Logo = styled(props => <Link {...props} />)`
+  color: black;
+  font-family: Montserrat;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 10px;
+  @media only screen and (min-width: 768px) {
+    padding: 0;
+  }
+`;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -12,76 +59,26 @@ const Navbar = class extends React.Component {
     }
   }
 
-  toggleHamburger = () => {
-    // toggle the active boolean in the state
-    this.setState(
-      {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
-      }
-    )
-  }
-
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
+      <StyledNav
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link className="navbar-item" to="/">
-              Justin Luong
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
+        <Container>
+          <Logo to="/">
+            Justin Luong
+          </Logo>
+          <div>
+            <StyledLink to="/about">
+              Now
+            </StyledLink>
+            <StyledLink to="/blog">
+              Blog
+            </StyledLink>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+        </Container>
+      </StyledNav>
     )
   }
 }

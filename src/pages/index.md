@@ -1,4 +1,5 @@
 ---
+templateKey: index-page
 title: Hello world
 image: /img/nerdedited.png
 heading: New Heading

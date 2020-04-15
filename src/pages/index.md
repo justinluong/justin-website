@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Hello world
-image: /img/nerdedited.png
+image: /img/nerdframed.png
 heading: New Heading
 subheading: Test 2
 ---

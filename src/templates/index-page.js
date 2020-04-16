@@ -10,18 +10,18 @@ const Container = styled.section`
   display: flex;
   flex-direction: column; 
   align-items: flex-start;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: auto;
-  padding: 20px;
+  padding: 20px 20px 0;
   @media only screen and (min-width: 768px) {
     flex-direction: row; 
-    padding: 30px 50px;
+    padding: 30px 50px 0;
   }
 `;
 
 const StyledImg = styled(props => <Img {...props} />)`
   min-width: 280px;
-  width: 40%;
+  width: 50%;
   align-self: center;
   @media only screen and (min-width: 768px) {
     aligh-self: flex-start;
@@ -51,19 +51,23 @@ const IntroContainer = styled.div`
   }
 `;
 
-export const IndexPageTemplate = ({ image }) => (
-  <Container>
-    <StyledImg fluid={!!image.childImageSharp ? image.childImageSharp.fluid : image} />
-    <IntroContainer>
-      <h1>Welcome to my crib.</h1>
-      <div>
-        <h3>Programmer</h3>
-        <h3>Maths Tutor</h3>
-        <h3>Bjj White Belt</h3>
-      </div>
-    </IntroContainer>
-  </Container>
-);
+export const IndexPageTemplate = (props) => {
+  console.log(props)
+  const { image } = props
+  return (
+    <Container>
+      <StyledImg fluid={!!image.childImageSharp ? image.childImageSharp.fluid : image} />
+      <IntroContainer>
+        <h1>Welcome to my crib.</h1>
+        <div>
+          <h3>Programmer</h3>
+          <h3>Maths Tutor</h3>
+          <h3>Bjj White Belt</h3>
+        </div>
+      </IntroContainer>
+    </Container>
+  )
+};
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

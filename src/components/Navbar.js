@@ -7,7 +7,7 @@ const StyledNav = styled.nav`
   padding-top: 10px;
   @media only screen and (min-width: 768px) {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -16,7 +16,7 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1024px;
   margin: auto;
   padding: 0 20px;
   @media only screen and (min-width: 768px) {

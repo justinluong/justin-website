@@ -6,9 +6,8 @@ const StyledNav = styled.nav`
   padding-bottom: 10px;
   padding-top: 10px;
   @media only screen and (min-width: 768px) {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding:0;
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 `;
 
@@ -85,7 +84,7 @@ const Navbar = class extends React.Component {
             Justin Luong
           </LongLogo>
           <div>
-            <StyledLink to="/about">
+            <StyledLink to="/now">
               Now
             </StyledLink>
             <StyledLink to="/blog">

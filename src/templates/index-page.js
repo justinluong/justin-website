@@ -12,11 +12,10 @@ const Container = styled.section`
   align-items: flex-start;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 20px;
+  padding: 20px;
   @media only screen and (min-width: 768px) {
     flex-direction: row; 
-    margin: auto;
-    padding: 20px 50px;
+    padding: 30px 50px;
   }
 `;
 
@@ -52,9 +51,9 @@ const IntroContainer = styled.div`
   }
 `;
 
-export const IndexPageTemplate = ({ image, title, heading, subheading }) => (
+export const IndexPageTemplate = ({ image }) => (
   <Container>
-    <StyledImg fluid={image.childImageSharp.fluid} />
+    <StyledImg fluid={!!image.childImageSharp ? image.childImageSharp.fluid : image} />
     <IntroContainer>
       <h1>Welcome to my crib.</h1>
       <div>
@@ -102,7 +101,6 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
         image {
           childImageSharp {
             fluid (maxWidth: 2048, quality: 100) {
@@ -110,8 +108,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        heading
-        subheading
       }
     }
   }

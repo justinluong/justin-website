@@ -24,4 +24,4 @@ Sustainable agriculture is farming in sustainable ways based on an understanding
 
 ### Direct sourcing
 
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+Direct trade is a form of sourcing practiced by some coffee roasters. 

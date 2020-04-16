@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.section`
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;

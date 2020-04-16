@@ -1,42 +1,43 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import styled from 'styled-components';
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.section`
   max-width: 1200px;
   margin: auto;
-  padding: 0 20px;
+  padding: 20px;
   @media only screen and (min-width: 768px) {
-    padding: 0 50px;
+    padding: 30px 50px;
   }
 `;
 
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+export const NowPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <Container>
-      {title}
+      <h1>{title}</h1>
       <PageContent className="content" content={content} />
     </Container>
   )
 }
 
-AboutPageTemplate.propTypes = {
+NowPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
-const AboutPage = ({ data }) => {
+const NowPage = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <AboutPageTemplate
+      <NowPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
         content={post.html}
@@ -45,14 +46,14 @@ const AboutPage = ({ data }) => {
   )
 }
 
-AboutPage.propTypes = {
+NowPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
 
-export default AboutPage
+export default NowPage 
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const nowPageQuery = graphql`
+  query NowPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

@@ -3,26 +3,23 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-  margin-top: 0;
   padding-bottom: 10px;
   padding-top: 10px;
   @media only screen and (min-width: 768px) {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    padding:0;
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 `;
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
   @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding: 0 50px;
   }
 `;
@@ -33,20 +30,34 @@ const StyledLink = styled(Link)`
   font-family: Montserrat;
   text-decoration: none;
   font-size: 20.8px;
+  font-weight: 600;
   @media only screen and (min-width: 768px) {
     padding: 0 0 0 20px;
   }
 `;
 
-const Logo = styled(props => <Link {...props} />)`
+const ShortLogo = styled(Link)`
+  color: black;
+  font-family: Montserrat;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 32px;
+  @media only screen and (min-width: 768px) {
+    display: none;
+    padding: 0;
+  }
+`;
+
+const LongLogo = styled(Link)`
   color: black;
   font-family: Montserrat;
   text-decoration: none;
   font-weight: bold;
   font-size: 32px;
-  padding-bottom: 10px;
+  display: none;
   @media only screen and (min-width: 768px) {
     padding: 0;
+    display: inline;
   }
 `;
 
@@ -66,11 +77,14 @@ const Navbar = class extends React.Component {
         aria-label="main-navigation"
       >
         <Container>
-          <Logo to="/">
+          <ShortLogo to="/">
+            JL
+          </ShortLogo>
+          <LongLogo to="/">
             Justin Luong
-          </Logo>
+          </LongLogo>
           <div>
-            <StyledLink to="/about">
+            <StyledLink to="/now">
               Now
             </StyledLink>
             <StyledLink to="/blog">

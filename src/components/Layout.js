@@ -17,8 +17,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: Montserrat;
   }
 
-  p, em, strong, i, b {
+  p, em, strong, i, b, a {
     font-family: Hind;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #234ef3;
   }
 `;
 

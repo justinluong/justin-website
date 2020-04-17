@@ -5,26 +5,25 @@ import Img from "gatsby-image";
 import styled from "styled-components";
 
 import Layout from "../components/Layout";
+import Container from "../components/containers/Container";
+import AllBlogs from "../components/AllBlogs";
 
-const Container = styled.section`
+const SectionContainer = styled.section`
   display: flex;
   flex-direction: column; 
   align-items: flex-start;
-  max-width: 1024px;
-  margin: auto;
-  padding: 20px 20px 0;
   @media only screen and (min-width: 768px) {
     flex-direction: row; 
-    padding: 30px 50px 0;
   }
 `;
 
 const StyledImg = styled(props => <Img {...props} />)`
   min-width: 280px;
-  width: 50%;
+  width: 100%;
   align-self: center;
   @media only screen and (min-width: 768px) {
     aligh-self: flex-start;
+    width: 50%;
   }
 `;
 
@@ -52,11 +51,12 @@ const IntroContainer = styled.div`
 `;
 
 export const IndexPageTemplate = (props) => {
-  console.log(props)
   const { image } = props
   return (
-    <Container>
-      <StyledImg fluid={!!image.childImageSharp ? image.childImageSharp.fluid : image} />
+    <SectionContainer>
+      <StyledImg 
+        fluid={!!image.childImageSharp ? image.childImageSharp.fluid : image} 
+      />
       <IntroContainer>
         <h1>Welcome to my crib.</h1>
         <div>
@@ -65,7 +65,7 @@ export const IndexPageTemplate = (props) => {
           <h3>Bjj White Belt</h3>
         </div>
       </IntroContainer>
-    </Container>
+    </SectionContainer>
   )
 };
 
@@ -81,12 +81,17 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-      />
+      <Container>
+        <IndexPageTemplate
+          image={frontmatter.image}
+          title={frontmatter.title}
+          heading={frontmatter.heading}
+          subheading={frontmatter.subheading}
+        />
+      </Container>
+      <Container>
+        <AllBlogs />
+      </Container>
     </Layout>
   );
 };
@@ -107,7 +112,7 @@ export const pageQuery = graphql`
       frontmatter {
         image {
           childImageSharp {
-            fluid (maxWidth: 2048, quality: 100) {
+            fluid (maxWidth: 512, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

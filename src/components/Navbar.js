@@ -2,25 +2,21 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
 
-const StyledNav = styled.nav`
-  padding-bottom: 10px;
-  padding-top: 10px;
-  @media only screen and (min-width: 768px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-`;
+import Container from './containers/Container';
 
-const Container = styled.div`
+const StyledNav = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+`;
+
+const NavContainer = styled(Container)`
   max-width: 1024px;
   margin: auto;
-  padding: 0 20px;
+  padding: 15px 20px;
   @media only screen and (min-width: 768px) {
-    padding: 0 50px;
+    padding: 30px 50px;
   }
 `;
 
@@ -72,11 +68,14 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <StyledNav
+      <NavContainer
         role="navigation"
         aria-label="main-navigation"
       >
-        <Container>
+        <StyledNav
+          role="navigation"
+          aria-label="main-navigation" 
+        >
           <ShortLogo to="/">
             JL
           </ShortLogo>
@@ -91,8 +90,8 @@ const Navbar = class extends React.Component {
               Blog
             </StyledLink>
           </div>
-        </Container>
-      </StyledNav>
+        </StyledNav>
+      </NavContainer>
     )
   }
 }

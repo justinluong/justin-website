@@ -3,18 +3,12 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+import Img from 'gatsby-image';
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import styled from 'styled-components';
-
-const Container = styled.section`
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-  @media only screen and (min-width: 768px) {
-    padding: 0 50px;
-  }
-`;
+import Container from '../components/containers/Container';
+import ArticleContainer from '../components/containers/ArticleContainer';
 
 export const BlogPostTemplate = ({
   content,
@@ -23,13 +17,18 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  featuredImage,
 }) => {
   const PostContent = contentComponent || Content
+  const image = !!featuredImage.childImageSharp ? featuredImage.childImageSharp.fluid : featuredImage;
 
   return (
-    <Container>
+    <ArticleContainer>
       {helmet || ''}
       <div>
+        <Img
+          fluid={image}
+        />
         <h1>
           {title}
         </h1>
@@ -48,7 +47,7 @@ export const BlogPostTemplate = ({
           </div>
         ) : null}
       </div>
-    </Container>
+    </ArticleContainer>
   )
 }
 
@@ -65,22 +64,25 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <BlogPostTemplate
-        content={post.html}
-        contentComponent={HTMLContent}
-        description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-      />
+      <Container>
+        <BlogPostTemplate
+          content={post.html}
+          contentComponent={HTMLContent}
+          description={post.frontmatter.description}
+          helmet={
+            <Helmet titleTemplate="%s | Blog">
+              <title>{`${post.frontmatter.title}`}</title>
+              <meta
+                name="description"
+                content={`${post.frontmatter.description}`}
+              />
+            </Helmet>
+          }
+          tags={post.frontmatter.tags}
+          title={post.frontmatter.title}
+          featuredImage={post.frontmatter.featuredimage}
+        />
+      </Container>
     </Layout>
   )
 }
@@ -103,6 +105,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid (maxWidth: 700, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

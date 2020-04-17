@@ -2,31 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import styled from 'styled-components';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
-const Container = styled.section`
-  max-width: 700px;
-  margin: auto;
-  padding: 20px 20px 0;
-  @media only screen and (min-width: 768px) {
-    padding: 30px 50px 0;
-  }
-`;
+import Container from '../components/containers/Container';
+import ArticleContainer from '../components/containers/ArticleContainer';
 
 export const NowPageTemplate = ({ image, title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
-  console.log(image)
+
   return (
-    <Container>
+    <ArticleContainer>
       <Img 
         fluid={!!image.childImageSharp ? image.childImageSharp.fluid: image} 
       />
       <h1>{title}</h1>
       <PageContent className="content" content={content} />
-    </Container>
+    </ArticleContainer>
   )
 }
 
@@ -41,12 +33,14 @@ const NowPage = ({ data }) => {
 
   return (
     <Layout>
-      <NowPageTemplate
-        image={post.frontmatter.image}
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+      <Container>
+        <NowPageTemplate
+          image={post.frontmatter.image}
+          contentComponent={HTMLContent}
+          title={post.frontmatter.title}
+          content={post.html}
+        />
+      </Container>
     </Layout>
   )
 }
@@ -65,7 +59,7 @@ export const nowPageQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid (maxWidth: 2048, quality: 100) {
+            fluid (maxWidth: 700, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

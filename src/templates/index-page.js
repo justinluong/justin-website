@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import Layout from "../components/Layout";
 import Container from "../components/containers/Container";
+import ArticleContainer from "../components/containers/ArticleContainer";
 import AllBlogs from "../components/AllBlogs";
 
 const SectionContainer = styled.section`
@@ -50,6 +51,12 @@ const IntroContainer = styled.div`
   }
 `;
 
+const StyledHeading = styled.h1`
+  font-size: 42px;
+  margin: 0;
+  padding-bottom: 15px;
+`;
+
 export const IndexPageTemplate = (props) => {
   const { image } = props
   return (
@@ -90,7 +97,10 @@ const IndexPage = ({ data }) => {
         />
       </Container>
       <Container>
-        <AllBlogs />
+        <ArticleContainer>
+          <StyledHeading>Latest Posts</StyledHeading>
+          <AllBlogs />
+        </ArticleContainer>
       </Container>
     </Layout>
   );

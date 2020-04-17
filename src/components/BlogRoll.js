@@ -17,12 +17,12 @@ const BlogRoll = ({ posts }) => {
       {posts &&
         posts.map(({ node: post }) => (
           <BlogRollItem
-            featuredImage={post.frontmatter.featuredimage}
             key={post.id}
             title={post.frontmatter.title}
             date={post.frontmatter.date}
             readingTime={post.fields.readingTime.text}
             excerpt={post.excerpt}
+            slug={post.fields.slug}
           />
         ))}
     </BlogRollContainer>

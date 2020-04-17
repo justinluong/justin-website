@@ -5,7 +5,7 @@ const Container = styled.div`
   margin: auto;
   padding: 15px 20px 0;
   @media only screen and (min-width: 768px) {
-    padding: 30px 50px 0;
+    padding: 60px 50px 0;
   }
 `;
 

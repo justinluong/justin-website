@@ -12,8 +12,6 @@ const StyledNav = styled.nav`
 `;
 
 const NavContainer = styled(Container)`
-  max-width: 1024px;
-  margin: auto;
   padding: 15px 20px;
   @media only screen and (min-width: 768px) {
     padding: 30px 50px;

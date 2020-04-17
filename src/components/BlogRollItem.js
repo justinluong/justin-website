@@ -1,48 +1,58 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PreviewCompatibleImage from './PreviewCompatibleImage';
 import styled from 'styled-components';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+import { FaCalendarAlt, FaHourglassHalf} from 'react-icons/fa';
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+
+const ItemContainer = styled.div`
+  padding-top: 30px;
+  h1 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+    transition: color .1s linear;
+  }
+  h1:hover {
+    color: #ffa500;
+  }
+  span {
+    padding-right: 24px;
+  }
+  p {
+    margin: 0;
+    padding-top: 5px
+  }
 `;
 
-const GridImage = styled.div`
-  grid-column-start: 3;
+const MetaContainer = styled.div`
+  padding-top: 5px;
 `;
 
-const GridContent = styled.div`
-  grid-column-start: 2;
+const StyledCalendarIcon = styled(FaCalendarAlt)`
+  color: #ffa500;
+  padding-right: 10px;
 `;
 
-const GridMeta = styled.div`
-  grid-column-start: 1;
+const StyledHourglassIcon = styled(FaHourglassHalf)`
+  color: #ffa500;
+  padding-right: 10px;
 `;
 
-
-const BlogRollItem = ({ featuredImage, title, readingTime, date, excerpt}) => {
-  console.log(featuredImage);
+const BlogRollItem = ({ title, readingTime, date, excerpt, slug }) => {
   return (
-    <Grid>
-      <GridMeta>
-        <p>{readingTime}</p>
-        <p>{date}</p>
-      </GridMeta>
-      <GridContent>
-        <p>{title}</p>
-        <p>{excerpt}</p>
-      </GridContent>
-      <GridImage>
-        <PreviewCompatibleImage
-          imageInfo={{
-            image: featuredImage,
-            alt: `featured image thumbnail for post ${title}`,
-          }}
-        />
-      </GridImage>
-    </Grid>
+    <ItemContainer>
+      <Link to={slug}>
+        <h1>{title}</h1>
+      </Link>
+      <MetaContainer>
+        <StyledHourglassIcon />
+        <span>{readingTime}</span>
+        <StyledCalendarIcon />
+        <span>{date}</span>
+      </MetaContainer>
+      <p>{excerpt}</p>
+    </ItemContainer>
   )
 }
 

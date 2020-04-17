@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: Montserrat;
   }
 
-  p, em, strong, i, b, a {
+  p, em, strong, i, b, a, span {
     font-family: Hind;
   }
   

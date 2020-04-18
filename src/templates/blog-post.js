@@ -4,11 +4,41 @@ import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image';
+import styled from 'styled-components';
+import { FaCalendarAlt, FaHourglassHalf} from 'react-icons/fa';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Container from '../components/containers/Container';
 import ArticleContainer from '../components/containers/ArticleContainer';
+
+const StylesContainer = styled.div`
+  img {
+    width: 100%
+  }
+`;
+
+const Title = styled.h1`
+  margin-bottom: 0;
+  font-size: 32px;
+`;
+
+const MetaContainer = styled.div`
+  padding-top: 5px;
+  span {
+    padding-right: 24px;
+  }
+`;
+
+const StyledCalendarIcon = styled(FaCalendarAlt)`
+  color: #ffa500;
+  padding-right: 10px;
+`;
+
+const StyledHourglassIcon = styled(FaHourglassHalf)`
+  color: #ffa500;
+  padding-right: 10px;
+`;
 
 export const BlogPostTemplate = ({
   content,
@@ -18,22 +48,33 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   featuredImage,
+  date,
+  readingTime
 }) => {
   const PostContent = contentComponent || Content
-  const image = !!featuredImage.childImageSharp ? featuredImage.childImageSharp.fluid : featuredImage;
+
+  let imageComponent = null;
+  if (!!featuredImage) {
+    const image = !!featuredImage.childImageSharp ? featuredImage.childImageSharp.fluid : featuredImage;
+    imageComponent = <Img fluid={image} />
+  }
 
   return (
     <ArticleContainer>
       {helmet || ''}
       <div>
-        <Img
-          fluid={image}
-        />
-        <h1>
-          {title}
-        </h1>
+        { imageComponent }
+        <Title>{title}</Title>
+        <MetaContainer>
+          <StyledHourglassIcon />
+          <span>{readingTime}</span>
+          <StyledCalendarIcon />
+          <span>{date}</span>
+        </MetaContainer>
         <p>{description}</p>
-        <PostContent content={content} />
+        <StylesContainer>
+          <PostContent content={content} />
+        </StylesContainer>
         {tags && tags.length ? (
           <div style={{ marginTop: `4rem` }}>
             <h4>Tags</h4>
@@ -81,6 +122,8 @@ const BlogPost = ({ data }) => {
           tags={post.frontmatter.tags}
           title={post.frontmatter.title}
           featuredImage={post.frontmatter.featuredimage}
+          date={post.frontmatter.date}
+          readingTime={post.fields.readingTime.text}
         />
       </Container>
     </Layout>
@@ -100,6 +143,11 @@ export const pageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        readingTime {
+          text
+        }
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

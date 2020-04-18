@@ -6,7 +6,7 @@ import { FaCalendarAlt, FaHourglassHalf} from 'react-icons/fa';
 
 
 const ItemContainer = styled.div`
-  padding-top: 30px;
+  margin-bottom: 30px;
   h1 {
     font-size: 24px;
     margin: 0;
@@ -16,9 +16,6 @@ const ItemContainer = styled.div`
   h1:hover {
     color: #ffa500;
   }
-  span {
-    padding-right: 24px;
-  }
   p {
     margin: 0;
     padding-top: 5px
@@ -27,6 +24,9 @@ const ItemContainer = styled.div`
 
 const MetaContainer = styled.div`
   padding-top: 5px;
+  span {
+    padding-right: 24px;
+  }
 `;
 
 const StyledCalendarIcon = styled(FaCalendarAlt)`

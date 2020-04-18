@@ -21,9 +21,11 @@ const StyledIconButton = styled(IconButton)`
 const FooterContainer = styled(Container)`
   display: flex;
   justify-content: center;
-  padding: 15px 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   @media only screen and (min-width: 768px) {
-    padding: 30px 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 `;
 

@@ -12,9 +12,11 @@ const StyledNav = styled.nav`
 `;
 
 const NavContainer = styled(Container)`
-  padding: 15px 20px;
+  margin-top: 15px;
+  margin-bottom: 45px;
   @media only screen and (min-width: 768px) {
-    padding: 30px 50px;
+    margin-top: 30px;
+    margin-bottom: 90px;
   }
 `;
 

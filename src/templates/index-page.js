@@ -13,7 +13,11 @@ const SectionContainer = styled.section`
   display: flex;
   flex-direction: column; 
   align-items: flex-start;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
   @media only screen and (min-width: 768px) {
+    margin-top: 45px;
+    margin-bottom: 45px;
     flex-direction: row; 
   }
 `;
@@ -53,8 +57,12 @@ const IntroContainer = styled.div`
 
 const StyledHeading = styled.h1`
   font-size: 42px;
-  margin: 0;
-  padding-bottom: 15px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
 `;
 
 export const IndexPageTemplate = (props) => {
@@ -97,10 +105,12 @@ const IndexPage = ({ data }) => {
         />
       </Container>
       <Container>
-        <ArticleContainer>
-          <StyledHeading>Latest Posts</StyledHeading>
-          <AllBlogs />
-        </ArticleContainer>
+        <SectionContainer>
+          <ArticleContainer>
+            <StyledHeading>Latest Posts</StyledHeading>
+            <AllBlogs />
+          </ArticleContainer>
+        </SectionContainer>
       </Container>
     </Layout>
   );

@@ -13,18 +13,24 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  * {
+    font-family: Hind;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: Montserrat;
   }
 
-  p, em, strong, i, b, a {
-    font-family: Hind;
-  }
-  
   a {
     text-decoration: none;
     color: #234ef3;
   }
+
+  li::marker {
+    color: red;
+    content: "•";
+  }
+
 `;
 
 const TemplateWrapper = ({ children }) => {

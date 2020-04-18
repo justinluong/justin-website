@@ -7,6 +7,8 @@ import {
   FaInstagram
 } from 'react-icons/fa';
 
+import Container from '../components/containers/Container';
+
 const IconButton = ({ className, to, children}) => {
   return <a className={className} href={to}>{children}</a>
 }
@@ -16,20 +18,20 @@ const StyledIconButton = styled(IconButton)`
   padding: 0px 10px;
 `;
 
-const Container = styled.div`
+const FooterContainer = styled(Container)`
   display: flex;
   justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  padding 50px 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   @media only screen and (min-width: 768px) {
-    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 `;
 
 const Footer = () => {
   return (
-    <Container>
+    <FooterContainer>
       <StyledIconButton to="https://www.goodreads.com/jb_luong">
         <FaGoodreadsG size={28}/>
       </StyledIconButton> 
@@ -42,7 +44,7 @@ const Footer = () => {
       <StyledIconButton to="https://www.youtube.com/channel/UCo9GCESrgIM_eDVzTy1jhFA">
         <FaYoutube size={28}/>
       </StyledIconButton> 
-    </Container>
+    </FooterContainer>
   )
 }
 

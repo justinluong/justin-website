@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { FaCalendarAlt, FaHourglassHalf} from 'react-icons/fa';
@@ -43,8 +42,6 @@ const StyledHourglassIcon = styled(FaHourglassHalf)`
 export const BlogPostTemplate = ({
   content,
   contentComponent,
-  description,
-  tags,
   title,
   helmet,
   featuredImage,
@@ -71,22 +68,9 @@ export const BlogPostTemplate = ({
           <StyledCalendarIcon />
           <span>{date}</span>
         </MetaContainer>
-        <p>{description}</p>
         <StylesContainer>
           <PostContent content={content} />
         </StylesContainer>
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul>
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
       </div>
     </ArticleContainer>
   )
@@ -95,7 +79,6 @@ export const BlogPostTemplate = ({
 BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.object,
 }
@@ -151,8 +134,6 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        description
-        tags
         featuredimage {
           childImageSharp {
             fluid (maxWidth: 700, quality: 100) {

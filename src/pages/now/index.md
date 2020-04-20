@@ -1,9 +1,10 @@
 ---
 templateKey: now-page
+date: 2020-04-20T14:02:47.243Z
 image: /img/undraw_reading_0re1.png
 title: What I'm Doing Now
 ---
-Paradoxically, there's more variety in my life despite my choices being limited from the lockdown. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
+Paradoxically, there's more variety in my life despite the lockdown limiting my activity choice. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
 
 ### Work
 

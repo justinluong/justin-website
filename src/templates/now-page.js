@@ -2,13 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import styled from 'styled-components';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import Container from '../components/containers/Container';
 import ArticleContainer from '../components/containers/ArticleContainer';
 
-export const NowPageTemplate = ({ image, title, content, contentComponent }) => {
+const StyledHeading = styled.h1`
+  font-size: 32px;
+  margin-bottom: 5px;
+`;
+
+export const NowPageTemplate = ({ image, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -16,8 +22,9 @@ export const NowPageTemplate = ({ image, title, content, contentComponent }) => 
       <Img 
         fluid={!!image.childImageSharp ? image.childImageSharp.fluid: image} 
       />
-      <h1>{title}</h1>
+      <StyledHeading>What I'm Doing Now</StyledHeading>
       <PageContent className="content" content={content} />
+
     </ArticleContainer>
   )
 }

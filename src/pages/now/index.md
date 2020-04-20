@@ -1,16 +1,19 @@
 ---
 templateKey: now-page
-image: /img/plush-design-studio-l3n9q27zulw-unsplash.jpg
+image: /img/undraw_reading_0re1.png
 title: What I'm Doing Now
 ---
-### Shade-grown coffee
+Paradoxically, there's more variety in my life despite my choices being limited from the lockdown. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
 
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a large number of migratory and resident species.
+### Work
 
-### Single origin
+Transitioning my [maths tutoring business](http://facebook.com/kaizenacademyAU) online has been a challenge but I'm settling into a nice rhythm. Most of my time goes into creating worksheets and recording lectures for my students. I'm also experimenting with posting short form maths videos on Youtube.
 
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+### Leisure
 
-### Sustainable farming
+If you keep your eyes peeled, there's a good chance you'll see me taking solitary strolls around Cabramatta. Lately, I've been having a lot of fun learning about graphic design. Apart from that, I split my free time between: reading, programming my website, singing, playing TFT and watching Korean dramas.
 
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+### Recent Stuff
+
+* I talked about managing procrastination in my latest [podcast episode](https://youtu.be/u-gzXVInMIU).
+* I [vlogged](https://www.youtube.com/watch?v=N70Apom98cQ) my trip to Thailand where I trained Bjj for two weeks.

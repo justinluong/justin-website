@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
@@ -14,7 +15,27 @@ const StyledHeading = styled.h1`
   margin-bottom: 5px;
 `;
 
-export const NowPageTemplate = ({ image, content, contentComponent }) => {
+const MetaContainer = styled.div`
+  span {
+    padding-right: 24px;
+  }
+`;
+
+const StyledCalendarIcon = styled(FaCalendarAlt)`
+  color: #ffa500;
+  padding-right: 10px;
+`;
+
+const EmphasisContainer = styled.div`
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  @media only screen and (min-width: 768px) {
+    margin: 30px;
+  }
+`;
+
+export const NowPageTemplate = ({ image, content, contentComponent, date }) => {
   const PageContent = contentComponent || Content
 
   return (
@@ -23,8 +44,19 @@ export const NowPageTemplate = ({ image, content, contentComponent }) => {
         fluid={!!image.childImageSharp ? image.childImageSharp.fluid: image} 
       />
       <StyledHeading>What I'm Doing Now</StyledHeading>
+      <MetaContainer>
+        <span>
+          <StyledCalendarIcon /> Updated {date}
+        </span>
+      </MetaContainer>
       <PageContent className="content" content={content} />
-
+      <EmphasisContainer>
+        <em>
+          This is a
+          <a href="https://nownownow.com/about"> now </a>
+          page.
+        </em>
+      </EmphasisContainer>
     </ArticleContainer>
   )
 }
@@ -46,6 +78,7 @@ const NowPage = ({ data }) => {
           contentComponent={HTMLContent}
           title={post.frontmatter.title}
           content={post.html}
+          date={post.frontmatter.date}
         />
       </Container>
     </Layout>
@@ -63,6 +96,7 @@ export const nowPageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "now-page" } }) {
       html
       frontmatter {
+        date(formatString: "MMMM DD, YYYY")
         title
         image {
           childImageSharp {

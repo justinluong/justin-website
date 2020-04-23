@@ -4,7 +4,7 @@ date: 2020-04-20T14:02:47.243Z
 image: /img/undraw_reading_0re1.png
 title: What I'm Doing Now
 ---
-Paradoxically, there's more variety in my life despite the lockdown limiting my activity choice. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
+Paradoxically, I've been trying out a lot of new things despite the lockdown limiting my activity choice. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
 
 ### Work
 
@@ -12,7 +12,7 @@ Transitioning my [maths tutoring business](http://facebook.com/kaizenacademyAU) 
 
 ### Leisure
 
-If you keep your eyes peeled, there's a good chance you'll see me taking solitary strolls around Cabramatta. Lately, I've been having a lot of fun learning about graphic design. Apart from that, I split my free time between: reading, programming my website, singing, playing TFT and watching Korean dramas.
+If you keep your eyes peeled, there's a good chance you'll see me taking strolls around Cabramatta. Lately, I've been having a lot of fun learning about graphic design. Apart from that, I split my free time between: reading, programming my website, singing, playing TFT and watching Korean dramas.
 
 ### Recent Stuff
 

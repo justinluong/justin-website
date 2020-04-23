@@ -42,7 +42,7 @@ A silent thank you to the websites that I drew inspiration from:
 
 ## Working from first principles
 
-Learning something new, I make the biggest improvements once I understand the fundamental building blocks of the topic. If I can put into words why I think something is good or bad, I can try to improve on it. 
+When learning something new, I make the biggest improvements once I understand the fundamental building blocks of the topic. If I can put into words why I think my work is good or bad, I can try to improve it. 
 
 What I've learned so far is that the visual design of a page implicitly communicates information to the viewer. It can help organise your message if done well or obscure it if done poorly. Here are some tips that have helped me:
 

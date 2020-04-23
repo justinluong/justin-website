@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 3 Anime To Watch During Lockdown
 date: 2020-04-23T01:31:19.145Z
 description: Anime Recommendations
-featuredimage: /img/zoid.jpg
+featuredimage: ''
 tags:
   - recommendation
   - anime

@@ -4,15 +4,13 @@ date: 2020-04-20T14:02:47.243Z
 image: /img/undraw_reading_0re1.png
 title: What I'm Doing Now
 ---
-Paradoxically, I've been trying out a lot of new things despite the lockdown limiting my activity choice. Rather than default to what I normally do, I've been forced to actively think about how I want to spend my time.
-
 ### Work
 
-Transitioning my [maths tutoring business](http://facebook.com/kaizenacademyAU) online has been a challenge but I'm settling into a nice rhythm. Most of my time goes into creating worksheets and recording lectures for my students. I'm also experimenting with posting short form maths videos on Youtube.
+I've been teaching over video calls recently and it's been working really well. While I learnt a lot about making videos through recording lectures, students didn't seem to get as much out of it. Instead, I've applied those same skills to making [short youtube videos](https://www.youtube.com/watch?v=0hiic6mMAfA) on maths. 
 
 ### Leisure
 
-If you keep your eyes peeled, there's a good chance you'll see me taking strolls around Cabramatta. Lately, I've been having a lot of fun learning about graphic design. Apart from that, I split my free time between: reading, programming my website, singing, playing TFT and watching Korean dramas.
+After signing up for Anime Lab I've been watching a lot more anime recently. The nice interface genuinely gives me that tiny bit of incentive to watch it over other things. Otherwise, I'm playing a lot of Teamfight Tactics (Diamond 3 right now).
 
 ### Recent Stuff
 

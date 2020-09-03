@@ -6,13 +6,15 @@ title: What I'm Doing Now
 ---
 ### Work
 
-I've been teaching over video calls recently and it's been working really well. While I learnt a lot about making videos through recording lectures, students didn't seem to get as much out of it. Instead, I've applied those same skills to making [short youtube videos](https://www.youtube.com/watch?v=0hiic6mMAfA) on maths. 
+A friend of mine helped me film a video advertisement for my [business](kaizenacademy.com.au). My current focus is on helping my current students get through their HSC year while also finding students for next year.
 
 ### Leisure
 
-After signing up for Anime Lab I've been watching a lot more anime recently. The nice interface genuinely gives me that tiny bit of incentive to watch it over other things. Otherwise, I'm playing a lot of Teamfight Tactics (Diamond 3 right now).
+I've recently decided that I want to quit games for a year! I found that I was spending too much time with it and was more frustrated than having fun most of the time. It always surprises me how much more leisure time I feel like I have when I don't play games.
+
+At the moment I'm reading 'The Way of Kings' by Brandon Sanderson. Finally getting to it after I promised two friends I would read it over a year ago... 
 
 ### Recent Stuff
 
-* I talked about managing procrastination in my latest [podcast episode](https://youtu.be/u-gzXVInMIU).
-* I [vlogged](https://www.youtube.com/watch?v=N70Apom98cQ) my trip to Thailand where I trained Bjj for two weeks.
+* Went on a short post uni retreat with two friends to think about my goals.
+* Finished my last subject at uni!

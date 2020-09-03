@@ -6,7 +6,7 @@ title: What I'm Doing Now
 ---
 ### Work
 
-A friend of mine helped me film a video advertisement for my [business](kaizenacademy.com.au). My current focus is on helping my current students get through their HSC year while also finding students for next year.
+A friend of mine helped me film a video advertisement for my [business](www.kaizenacademy.com.au). My current focus is on helping my current students get through their HSC year while also finding students for next year.
 
 ### Leisure
 

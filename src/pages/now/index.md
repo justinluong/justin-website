@@ -6,15 +6,10 @@ title: What I'm Doing Now
 ---
 ### Work
 
-A friend of mine helped me film a video advertisement for my [business](https://www.kaizenacademy.com.au/). My current focus is on helping my current students get through their HSC year while also finding students for next year.
+I started a job this year as a Machine Learning Engineer! Really enjoying delving back into writing software. My main focus right now is to build my technical skills in this field.
+
+In my spare time I'm still doing my podcast but it's more on maintenance mode at the moment, not really actively focusing on it.
 
 ### Leisure
 
-I've recently decided that I want to quit games for a year! I found that I was spending too much time with it and was more frustrated than having fun most of the time. It always surprises me how much more leisure time I feel like I have when I don't play games.
-
-At the moment I'm reading 'The Way of Kings' by Brandon Sanderson. Finally getting to it after I promised two friends I would read it over a year ago... 
-
-### Recent Stuff
-
-* Went on a short post uni retreat with two friends to think about my goals.
-* Finished my last subject at uni!
+Still doing a lot of BJJ, I've been thinking about getting back into singing lessons but I'll need to carve out time for it.

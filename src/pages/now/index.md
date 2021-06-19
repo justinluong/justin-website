@@ -6,10 +6,8 @@ title: What I'm Doing Now
 ---
 ### Work
 
-I started a job this year as a Machine Learning Engineer! Really enjoying delving back into writing software. My main focus right now is to build my technical skills in this field.
-
-In my spare time I'm still doing my podcast but it's more on maintenance mode at the moment, not really actively focusing on it.
+At the moment, I'm not actively putting too much effort into upskilling in my career. Already learning a bunch by just chugging along at work as an ML engineer. On the train I've also been making my way through a few ML books that I've had on my to read list.
 
 ### Leisure
 
-Still doing a lot of BJJ, I've been thinking about getting back into singing lessons but I'll need to carve out time for it.
+I recently picked up dancing! Really enjoying it at the moment. Still doing bjj but chilling out a bit to explore other things.
